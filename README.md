@@ -14,8 +14,8 @@ The logic/algorithm of this program is:
 - Return the largest number in the collector array.  
 
 2. Cyclic Rotation  
-This lesson's goal is to create right shifted A array in N shifts. The last element will be shifted as the first element. For example we have an array A{3,8,9,7,6}. If we shifted it to the right once it will result A{6,3,8,9,7}. So if the function is function(A{3,8,9,7,6}, 3) it will shift the array three times to the right as A{9,7,6,3,8}. Return the shifted array.    
-I create two functions to make it easier. First is the function for shifting the array to the right, let's called it shifting(). The second is a main function for shifting the array N times and updating the array elements' position, let's called it solution().  
+This lesson's goal is to create right shifted A array in N shifts. The last element will be shifted as the first element. For example we have an array A{3,8,9,7,6}. If we shifted it to the right once it will result A{6,3,8,9,7}. So if the function is function(A{3,8,9,7,6}, 3) it will shift the array three times to the right as A{9,7,6,3,8}. Return the shifted array.  
+  I create two functions to make it easier. First is the function for shifting the array to the right, let's called it shifting(). The second is a main function for shifting the array N times and updating the array elements' position, let's called it solution().  
 The logic/algorithm of this program is:  
 - For the shifting(), I started from the last element, and decrementing one by one to the left. So the main idea of this function is to drag the last element, changing its position one by one to the first position, and return the shifted array.  
 - For the solution(), I just updated the array's arrangement N times, then return the array as a solution.  
