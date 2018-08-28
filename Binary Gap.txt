@@ -1,0 +1,28 @@
+// you can also use imports, for example:
+// import java.util.*;
+import java.util.Arrays;
+
+// you can write to stdout for debugging purposes, e.g.
+// System.out.println("this is a debug message");
+
+class Solution {
+    public int solution(int N) {
+        // write your code in Java SE 8
+        String a = "";
+        int awal = -1, akhir = -1;
+        int counterpenampung = 0;
+        int[] penampung = new int[100];
+        a = Integer.toBinaryString(N);
+        for(int i = 0; i < a.length(); i++){
+            if (a.charAt(i) == '1' && awal == -1){
+                awal = i;
+            } else if (a.charAt(i) == '1' && awal != -1){
+                akhir = i;
+                penampung[counterpenampung] = (akhir-awal) - 1;
+                awal = akhir;
+                counterpenampung++;
+            }
+        }
+        return Arrays.stream(penampung).max().getAsInt();
+    }
+}
